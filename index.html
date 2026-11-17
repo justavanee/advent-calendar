@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Advent Calendar</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="snow" class="snow" aria-hidden="true"></div>
+  <main id="calendar-page" class="calendar-page" tabindex="-1">
+    <header class="calendar-header">
+      <p class="eyebrow">Open a door and to try a recipe</p>
+      <h1>24 Days of YUM</h1>
+    </header>
+    <p id="loading-status" role="status">Loading your recipes…</p>
+    <section id="calendar" class="calendar-grid" aria-label="24 recipe advent calendar doors"></section>
+  </main>
+
+  <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+    <div class="reveal-panel panel-left" aria-hidden="true"></div>
+    <div class="reveal-panel panel-right" aria-hidden="true"></div>
+    <div class="welcome-content">
+      <h2 id="welcome-title"><em>Recipe Advent Calendar</em></h2>
+      <p class="welcome-subtitle">24 ideas for cooking & celebrating</p>
+      <button id="enter-button" class="enter-button" type="button">Click to Start</button>
+    </div>
+  </section>
+
+  <dialog id="recipe-dialog" aria-labelledby="recipe-title">
+    <button id="close-dialog" class="close-button" aria-label="Close recipe" type="button">×</button>
+    <div id="recipe-content"></div>
+  </dialog>
+</body>
+</html>
